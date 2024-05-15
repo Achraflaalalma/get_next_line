@@ -6,7 +6,7 @@
 /*   By: alaalalm <alaalalm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 17:06:15 by alaalalm          #+#    #+#             */
-/*   Updated: 2023/12/08 18:11:15 by alaalalm         ###   ########.fr       */
+/*   Updated: 2024/05/15 14:41:20 by alaalalm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,7 @@ char	*read_chars(int fd, char *join)
 			free(temp_join);
 		}
 	}
-	free(buffer);
-	return (join);
+	return (free(buffer), join);
 }
 
 char	*polish(char *join)
