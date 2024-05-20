@@ -1,5 +1,5 @@
 <h1 align="center">Get Next Line</h1>
-<h2>Summary</h2>
+<h2>🖊Summary</h2>
 <p>
   Get Next Line is a function that reads a file line by line. It is a function
   that is part of the 42 curriculum and is used in many projects to read files.
