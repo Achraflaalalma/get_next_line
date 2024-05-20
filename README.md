@@ -93,7 +93,7 @@ int get_next_line(int fd, char **line);
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1024 get_next_line.c get_next_line_utils.c your_program.c -o your_program
 ```
 <p>
-In this example, BUFFER_SIZE is set to 1024. You can adjust this value to whatever is appropriate for your use case.
+In this example, BUFFER_SIZE is set to <code>1024.</code> You can adjust this value to whatever is appropriate for your use case.
 </p>
 
 <h2>Additional Notes</h2>
