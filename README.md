@@ -24,9 +24,9 @@
 <p>
 	The function prototype is as follows:
 </p>
-<pre>
+```C
 	int get_next_line(int fd, char **line);
-</pre>
+```
 
 <h3>Parameters</h3>	
 	<lu>
