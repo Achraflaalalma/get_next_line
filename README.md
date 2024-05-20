@@ -55,8 +55,8 @@ int get_next_line(int fd, char **line);
 	The following example demonstrates how to use the get_next_line function to read a file.
 </p>
 
-```C
 <pre>
+	<code>
 	#include "get_next_line.h"
 	#include <fcntl.h>
 	#include <stdio.h>
@@ -84,8 +84,8 @@ int get_next_line(int fd, char **line);
 		close(fd);
 		return (0);
 	}
+	</code>
 </pre>
-```
 
 <h2>Compiling</h2>
 
