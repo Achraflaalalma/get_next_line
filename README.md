@@ -25,7 +25,7 @@
 	The function prototype is as follows:
 </p>
 ```C
-	int get_next_line(int fd, char **line);
+int get_next_line(int fd, char **line);
 ```
 
 <h3>Parameters</h3>	
