@@ -92,9 +92,6 @@ int get_next_line(int fd, char **line);
 ```C
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1024 get_next_line.c get_next_line_utils.c your_program.c -o your_program
 ```
-<p>
-In this example, BUFFER_SIZE is set to <code>1024.</code> You can adjust this value to whatever is appropriate for your use case.
-</p>
 
 <h2>Additional Notes</h2>
 <ul>
@@ -102,7 +99,7 @@ In this example, BUFFER_SIZE is set to <code>1024.</code> You can adjust this va
 		Ensure you handle memory correctly to avoid leaks.
 	</li>
 	<li>
-		The buffer size can be adjusted according to your needs by defining BUFFER_SIZE.
+		The buffer size can be adjusted according to your needs by defining <code>BUFFER_SIZE.<code/>
 	</li>
 </ul>
 
@@ -152,3 +149,13 @@ int main(void) {
 }
 
 </code></pre>
+
+<h2>Additional Notes</h2>
+<ul>
+	<li>
+		Ensure you handle memory correctly to avoid leaks.
+	</li>
+	<li>
+		The buffer size can be adjusted according to your needs by defining BUFFER_SIZE.
+	</li>
+</ul>
