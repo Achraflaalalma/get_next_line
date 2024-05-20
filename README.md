@@ -84,9 +84,11 @@ int get_next_line(int fd, char **line);
 	}
 </pre>
 <h2>Compiling</h2>
-<code>
-	gcc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c your_program.c -o your_program
-</code>
+
+```C
+gcc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c your_program.c -o your_program
+```
+
 <h2>Additional Notes</h2>
 <ul>
 	<li>
