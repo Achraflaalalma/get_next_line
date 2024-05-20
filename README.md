@@ -146,6 +146,6 @@ int main(void) {
 		Ensure you handle memory correctly to avoid leaks.
 	</li>
 	<li>
-		The buffer size can be adjusted according to your needs by defining BUFFER_SIZE
+		The buffer size can be adjusted according to your needs by defining <code>>BUFFER_SIZE.</code
 	</li>
 </ul>
