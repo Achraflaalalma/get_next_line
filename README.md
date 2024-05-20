@@ -57,33 +57,33 @@ int get_next_line(int fd, char **line);
 
 <pre>
 	<code>
-	#include "get_next_line.h"
-	#include <fcntl.h>
-	#include <stdio.h>
+#include "get_next_line.h"
+#include <fcntl.h>
+#include <stdio.h>
 
-	int main(void)
+int main(void)
+{
+	int fd;
+	char *line;
+	int ret;
+
+	fd = open("file.txt", O_RDONLY);
+	if (fd == -1)
+	   return (1);
+	ret = get_next_line(fd, &line);
+	while (ret > 0)
 	{
-		int fd;
-		char *line;
-		int ret;
-
-		fd = open("file.txt", O_RDONLY);
-		if (fd == -1)
-			return (1);
-		ret = get_next_line(fd, &line);
-		while (ret > 0)
-		{
-			printf("%s\n", line);
-			free(line);
-			ret = get_next_line(fd, &line);
-		}
-		if (ret == -1)
-			return (1);
-		printf("%s\n", line);
-		free(line);
-		close(fd);
-		return (0);
+	   printf("%s\n", line);
+	   free(line);
+	   ret = get_next_line(fd, &line);
 	}
+	if (ret == -1)
+	   return (1);
+	printf("%s\n", line);
+	free(line);
+	close(fd);
+	return (0);
+}
 	</code>
 </pre>
 
