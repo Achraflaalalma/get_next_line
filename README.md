@@ -57,12 +57,9 @@ int get_next_line(int fd, char **line);
 
 <pre>
 	<code>
-		
-	```C
 	#include "get_next_line.h"
 	#include <fcntl.h>
 	#include <stdio.h>
-	```
 
 	int main(void)
 	{
