@@ -105,3 +105,50 @@ In this example, BUFFER_SIZE is set to <code>1024.</code> You can adjust this va
 		The buffer size can be adjusted according to your needs by defining BUFFER_SIZE.
 	</li>
 </ul>
+
+<h2>Bonus Part</h2>
+
+<p>Your <code>get_next_line()</code> can manage multiple file descriptors at the same time.
+For example, if you can read from the file descriptors 3, 4 and 5, you should be
+able to read from a different fd per call without losing the reading thread of each
+file descriptor or returning a line from another fd.
+It means that you should be able to call get_next_line() to read from fd 3, then
+fd 4, then 5, then once again 3, once again 4, and so forth.</p>
+
+<pre><code>
+#include <fcntl.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "get_next_line_bonus.h"
+
+void read_from_fd(int fd, const char *label) {
+    char *line;
+    int result;
+    while ((result = get_next_line(fd, &line)) > 0) {
+        printf("%s: %s\n", label, line);
+        free(line);
+    }
+    if (result == -1) perror("Error reading file");
+}
+
+int main(void) {
+    int fd1 = open("file1.txt", O_RDONLY);
+    int fd2 = open("file2.txt", O_RDONLY);
+    int fd3 = open("file3.txt", O_RDONLY);
+    
+    if (fd1 == -1 || fd2 == -1 || fd3 == -1) {
+        perror("Error opening files");
+        return 1;
+    }
+
+    read_from_fd(fd1, "File 1");
+    read_from_fd(fd2, "File 2");
+    read_from_fd(fd3, "File 3");
+
+    close(fd1);
+    close(fd2);
+    close(fd3);
+    return 0;
+}
+
+</code></pre>
