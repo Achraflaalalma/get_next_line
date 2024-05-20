@@ -93,16 +93,6 @@ int get_next_line(int fd, char **line);
 gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1024 get_next_line.c get_next_line_utils.c your_program.c -o your_program
 ```
 
-<h2>Additional Notes</h2>
-<ul>
-	<li>
-		Ensure you handle memory correctly to avoid leaks.
-	</li>
-	<li>
-		The buffer size can be adjusted according to your needs by defining <code>BUFFER_SIZE.<code/>
-	</li>
-</ul>
-
 <h2>Bonus Part</h2>
 
 <p>Your <code>get_next_line()</code> can manage multiple file descriptors at the same time.
@@ -156,6 +146,6 @@ int main(void) {
 		Ensure you handle memory correctly to avoid leaks.
 	</li>
 	<li>
-		The buffer size can be adjusted according to your needs by defining BUFFER_SIZE.
+		The buffer size can be adjusted according to your needs by defining <code>BUFFER_SIZE.<code/>
 	</li>
 </ul>
