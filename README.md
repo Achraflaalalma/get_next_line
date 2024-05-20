@@ -1,4 +1,4 @@
-<h1 align="center">Get Next Line</h1>
+<h1 align="center" style="color:blue;" >Get Next Line</h1>
 <h2>Summary</h2>
 <p>
   Get Next Line is a function that reads a file line by line. It is a function
