@@ -54,6 +54,8 @@ int get_next_line(int fd, char **line);
 <p>
 	The following example demonstrates how to use the get_next_line function to read a file.
 </p>
+
+```C
 <pre>
 	#include "get_next_line.h"
 	#include <fcntl.h>
@@ -83,11 +85,16 @@ int get_next_line(int fd, char **line);
 		return (0);
 	}
 </pre>
+```
+
 <h2>Compiling</h2>
 
 ```C
-gcc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c your_program.c -o your_program
+gcc -Wall -Wextra -Werror -D BUFFER_SIZE=1024 get_next_line.c get_next_line_utils.c your_program.c -o your_program
 ```
+<p>
+In this example, BUFFER_SIZE is set to 1024. You can adjust this value to whatever is appropriate for your use case.
+</p>
 
 <h2>Additional Notes</h2>
 <ul>
